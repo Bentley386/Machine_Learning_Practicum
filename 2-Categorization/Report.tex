@@ -1,0 +1,63 @@
+\documentclass{article}
+
+
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{geometry}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{romannum}
+\usepackage{physics}
+\usepackage{amsmath,amsfonts,amsthm,bm} % Math packages
+\geometry{margin=1in}
+
+\errorcontextlines 10000
+\begin{document}
+\pagenumbering{gobble}
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        \Large
+\includegraphics[width=.4\linewidth]{../logo.pdf}\\
+        \Large
+\vspace{1cm}
+        Machine Learning Practicum\\
+        \huge
+        \textbf{Classifying star spectra\\}
+\Large  
+        \vspace{1cm}
+        \textbf{Andrej Kolar - Po{\v z}un\\}
+        \vspace{0.8cm}
+
+\vfill
+\normalsize
+\end{center}. 
+\end{titlepage}
+\newpage
+\pagenumbering{arabic}
+\section*{Intro}
+Classifying different types of stars is a challenge in astronomy because of the seemingly limited amount of information that we have at our disposal - stars are so far, that they are effectively point sources of light. For this reason we consider the spectra of that light, which can give us a number of useful information about a star including its temperature, element composition, gravitational acceleration on the star's surface, angular velocity of the speed, magnetic field... It should be mentioned that while it's known that this information is contained in the spectra, obtaining it is a whole different problem - the physical laws governing all the involved components, such as the magnetohydrodynamics are immensly complicated. For that reason, we opt for an easier approach.
+What adds to the challenge is also the fact that spectra can be altered as they pass the interstellar medium as well as the Earth's atmosphere.
+
+\section*{Data}
+We use the data set from the GALAH project, which is a scan of the sky performed by a telescope in Australia.
+The spectra are normalised and the Doppler effect for frequency shifting is already accounted for. Very few (I suppose especially nearby?) stars are labelled and fall into the following categories:
+
+Our goal is to categorize also the rest into one of those classes.
+\begin{itemize}
+\item MAB - Stars with molecular absorbtion lines
+\item BIN - Binary stars
+\item TRI - Triple stars
+\item HFR - Hot, fast rotating stars
+\item HAE - Stars with $H\alpha$ emissions
+\item CMP - cold stars with few metals
+\item DIB - hot stars with stronger interstellar absrobtions
+\end{itemize}
+
+
+
+\end{document}

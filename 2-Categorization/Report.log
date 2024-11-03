@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.1.30)  13 OCT 2024 13:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.1.30)  3 NOV 2024 17:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -340,40 +340,134 @@ Package pdftex.def Info: ../logo.pdf  used on input line 25.
 
 {C:/Users/spyro/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <../logo.pdf>
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 56.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
 
  (C:\Users\spyro\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 56.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
 
 
 (C:\Users\spyro\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-[1] (Report.aux)
+<plots/labeled.png, id=22, 456.65607pt x 269.5671pt>
+File: plots/labeled.png Graphic file (type png)
+<use plots/labeled.png>
+Package pdftex.def Info: plots/labeled.png  used on input line 65.
+(pdftex.def)             Requested size: 328.82707pt x 194.12106pt.
+
+[1 <./plots/labeled.png>]
+<plots/PCA2D.png, id=30, 462.528pt x 346.896pt>
+File: plots/PCA2D.png Graphic file (type png)
+<use plots/PCA2D.png>
+Package pdftex.def Info: plots/PCA2D.png  used on input line 85.
+(pdftex.def)             Requested size: 225.4804pt x 169.11243pt.
+<plots/PCA3D.png, id=31, 462.528pt x 346.896pt>
+File: plots/PCA3D.png Graphic file (type png)
+<use plots/PCA3D.png>
+Package pdftex.def Info: plots/PCA3D.png  used on input line 88.
+(pdftex.def)             Requested size: 225.4804pt x 169.11243pt.
+<plots/PCA6D.png, id=32, 462.528pt x 346.896pt>
+File: plots/PCA6D.png Graphic file (type png)
+<use plots/PCA6D.png>
+Package pdftex.def Info: plots/PCA6D.png  used on input line 99.
+(pdftex.def)             Requested size: 328.82707pt x 246.63135pt.
+ [2 <./plots/PCA2D.png> <./plots/PCA3D.png>]
+<plots/KernelPCA.png, id=39, 462.528pt x 346.896pt>
+File: plots/KernelPCA.png Graphic file (type png)
+<use plots/KernelPCA.png>
+Package pdftex.def Info: plots/KernelPCA.png  used on input line 111.
+(pdftex.def)             Requested size: 328.82707pt x 246.63135pt.
+ [3 <./plots/PCA6D.png> <./plots/KernelPCA.png>]
+<plots/LLE.png, id=45, 462.528pt x 346.896pt>
+File: plots/LLE.png Graphic file (type png)
+<use plots/LLE.png>
+Package pdftex.def Info: plots/LLE.png  used on input line 123.
+(pdftex.def)             Requested size: 328.82707pt x 246.63135pt.
+<plots/tsne.png, id=46, 462.528pt x 346.896pt>
+File: plots/tsne.png Graphic file (type png)
+<use plots/tsne.png>
+Package pdftex.def Info: plots/tsne.png  used on input line 135.
+(pdftex.def)             Requested size: 328.82707pt x 246.63135pt.
+ [4 <./plots/LLE.png>]
+<plots/logistic1.png, id=51, 462.528pt x 346.896pt>
+File: plots/logistic1.png Graphic file (type png)
+<use plots/logistic1.png>
+Package pdftex.def Info: plots/logistic1.png  used on input line 152.
+(pdftex.def)             Requested size: 328.82707pt x 246.63135pt.
+ [5 <./plots/tsne.png>]
+<plots/logistic3.png, id=56, 462.528pt x 346.896pt>
+File: plots/logistic3.png Graphic file (type png)
+<use plots/logistic3.png>
+Package pdftex.def Info: plots/logistic3.png  used on input line 163.
+(pdftex.def)             Requested size: 328.82707pt x 246.63135pt.
+ [6 <./plots/logistic1.png> <./plots/logistic3.png>]
+<plots/logisticCV3.png, id=63, 462.528pt x 346.896pt>
+File: plots/logisticCV3.png Graphic file (type png)
+<use plots/logisticCV3.png>
+Package pdftex.def Info: plots/logisticCV3.png  used on input line 174.
+(pdftex.def)             Requested size: 328.82707pt x 246.63135pt.
+<plots/perceptron.png, id=64, 462.528pt x 346.896pt>
+File: plots/perceptron.png Graphic file (type png)
+<use plots/perceptron.png>
+Package pdftex.def Info: plots/perceptron.png  used on input line 185.
+(pdftex.def)             Requested size: 328.82707pt x 246.63135pt.
+ [7 <./plots/logisticCV3.png>]
+<plots/svc.png, id=69, 462.528pt x 346.896pt>
+File: plots/svc.png Graphic file (type png)
+<use plots/svc.png>
+Package pdftex.def Info: plots/svc.png  used on input line 196.
+(pdftex.def)             Requested size: 328.82707pt x 246.63135pt.
+ [8 <./plots/perceptron.png> <./plots/svc.png>]
+<plots/tree.png, id=75, 462.528pt x 346.896pt>
+File: plots/tree.png Graphic file (type png)
+<use plots/tree.png>
+Package pdftex.def Info: plots/tree.png  used on input line 207.
+(pdftex.def)             Requested size: 328.82707pt x 246.63135pt.
+<plots/gradTree.png, id=76, 462.528pt x 346.896pt>
+File: plots/gradTree.png Graphic file (type png)
+<use plots/gradTree.png>
+Package pdftex.def Info: plots/gradTree.png  used on input line 218.
+(pdftex.def)             Requested size: 328.82707pt x 246.63135pt.
+ [9 <./plots/tree.png>]
+<plots/randomTree.png, id=81, 462.528pt x 346.896pt>
+File: plots/randomTree.png Graphic file (type png)
+<use plots/randomTree.png>
+Package pdftex.def Info: plots/randomTree.png  used on input line 229.
+(pdftex.def)             Requested size: 328.82707pt x 246.63135pt.
+
+[10 <./plots/gradTree.png> <./plots/randomTree.png>]
+<plots/nb.png, id=87, 462.528pt x 346.896pt>
+File: plots/nb.png Graphic file (type png)
+<use plots/nb.png>
+Package pdftex.def Info: plots/nb.png  used on input line 240.
+(pdftex.def)             Requested size: 328.82707pt x 246.63135pt.
+ [11 <./plots/nb.png>]
+(Report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5737 strings out of 474542
- 90611 string characters out of 5744446
- 1928978 words of memory out of 5000000
- 27903 multiletter control sequences out of 15000+600000
+ 5880 strings out of 474542
+ 93757 string characters out of 5744446
+ 1931978 words of memory out of 5000000
+ 28046 multiletter control sequences out of 15000+600000
  564071 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 79i,5n,93p,820b,216s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,9n,93p,904b,405s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\spyro\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk><C:/Users/spyro/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx12.pfb><C:/Users/spyro/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmmi10.pfb><C:/Users/spyro/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/spyro/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on Report.pdf (2 pages, 384678 bytes).
+/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/spyro/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Report.pdf (12 pages, 15407470 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
+ 118 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

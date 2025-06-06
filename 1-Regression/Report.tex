@@ -58,7 +58,7 @@ From cernbox.cern.ch, we get the following data (.h5 files):
 The first step is to bin the input data and plot the histograms. The results can be seen on Figure below:
 \begin{figure}[H]
 \centering
-\begin{subfigure}{.7\textwidth}
+\begin{subfigure}{.5\textwidth}
 \includegraphics[width=\linewidth]{Pictures/all_hmumu_ratio.pdf}
 \end{subfigure}
 \caption*{On the top, experimental (black) and simulated data is shown. The lower plot shows that we have more actual events than the simulated background (bkg). Number of bins: 50.}
@@ -86,7 +86,7 @@ So the errors per bin decrease as we increase their number, but the error of the
 From the previous pictures we could notice that the simulated background is not a very good fit to the data, even outside the Higgs' region. The difference is minimal, but still observable with naked eye and we need a more accurate model of the background to find the Higgs' signal (which, remember, is much smaller and could easily be smeared by wrong background). We will then be able to subtract the background from the experimental data.
 
 Obviously the goal isn't just a perfect fit, which we could get by overfitting - we want our solution to be somewhat smooth/regularized.
-
+\subsection*{Least squares fit}
 We start by a global polynomial fit, obtained by the non linear least squares method (scipy's curvefit). On Figure below are fits with polynomials of order 3 and 4. The former is clearly not capturing the behaviour well enough, while the 4th order is not doing much better too. The curvefit method also returns the covariance of parameters (which we can transform in the spread of the prediction, but I have chosen not to do that here). Increasing the monomial degree further could put as in danger of overfitting so we move on to the more complex methods.
 
 Note - we could also use local polynomial approximation instead of global one (or polynomial splines). I decided not to do this here, as I already have alot of experience with this and I am aiming to try out new methods in this report.  
@@ -102,7 +102,7 @@ Note - we could also use local polynomial approximation instead of global one (o
 \caption*{Fitting simulated background data with polynomials of degree 3 and 4 using nonlinear least squares.}
 \label{fig:bkgPolyFit}
 \end{figure}
-
+\subsection*{Ridge regression}
 Next we aim to increase the monomial order further up to $10$, with some regularization to maintain smoothness. This will be achieved with Ridge regression (sklearn), where the features are expanded to include monomial powers of the X-data $1, x, x^2, \dots, x^{10}$.
 We will also rescale (standarize) the input/output as to better interpret the values of the regularization parameter $\alpha$.
 
@@ -124,7 +124,7 @@ The further (and very powerful) improvement would be to add kernel trick and use
 \end{subfigure}
 \caption*{Fitting simulated background data with polynomials of degree 10 with Ridge regression.}
 \end{figure}
-
+\subsection*{Support Vector Regression}
 Next we try Support Vector machine Regression (SVR), which allows for employing the kernel trick - effectively interpolating with a feature transformation of high dimensionality. The parameter $C$ controls the regularization of the weights, while $\varepsilon$ affects the number of support vectors (it's the width of the soft-barrier in the cost function). The main advantage of SVR over KRR is its lower computational complexity, which is not really an issue for our case at hand, so I am doing it purely for educational reasons. I didn't spend much time playing with these parameters but we can see that the SVR with RBF kernel seems to match the data well. However... Both in SVR and KRR we don't get any error information (except the values of the residuals)
 
 \begin{figure}[H]
@@ -137,7 +137,7 @@ Next we try Support Vector machine Regression (SVR), which allows for employing 
 \end{subfigure}
 \caption*{Fitting simulated background data to a SVR}
 \end{figure}
-
+\subsection*{Gaussian Process Regression}
 Finally we try Gaussian Process Regression (GPR), with two different RBF kernels (for the covariance matrix) - Gaussian and Matern. Figure below. Besides being seemingly better fitted for our data, a major advantage of these methods is that they are Bayesian, meaning we get the distribution and error spread as a part of our result. The shape parameter is automatically optimised by the sklearn's GaussianProcessRegressor method.
 
 \begin{figure}[H]
@@ -176,7 +176,7 @@ The best fit can be seen below:
 \label{fig:CBfit}
 \end{figure}
 
-\section*{All together}
+\section*{Putting it all together}
 So we have played and got familiar with various methods of regression. Now we put it all together to find Higgs'. For this section, similar methods as in CERN are employed (using new methods would be too time consuming for this report)
 
 First we fit the simulated background, this time by an ATLAS function, that is also commonly used in CERN (we find the best fit for the free parameter with curvefit). We can see that it fits very nicely:

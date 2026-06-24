@@ -4,7 +4,7 @@ In the second exercise, we aim to classify different stars from their spectra. T
 a suitable dimensionality reduction and then applying a classification method.
 
 <div style="text-align: center;">
-<img src="./Pictures/logisticCV3.png" alt="Classified plot' Data" width="400"/>
+<img src="./plots/logisticCV3.png" alt="Classified plot' Data" width="400"/>
 </div>
 <br>
 
